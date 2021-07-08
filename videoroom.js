@@ -52,9 +52,8 @@ var janus = null;
 var sfutest = null;
 var opaqueId = "videoroomtest-" + Janus.randomString(12);
 
-var myroom = parseInt($("#roomId").val()); // Demo room
-console.log({ myroom });
-// if (getQueryStringValue("room") !== "") myroom = parseInt($("#roomId").val());
+var myroom = 1234; // Demo room
+if (getQueryStringValue("room") !== "") myroom = parseInt($("#roomId").val());
 var myusername = null;
 var myid = null;
 var mystream = null;
@@ -498,6 +497,8 @@ function registerUsername() {
     $("#username").attr("disabled", true);
     $("#register").attr("disabled", true).unbind("click");
     var username = $("#username").val();
+    myroom = parseInt($("#roomId").val()); // Demo room
+    console.log({ myroom });
     if (username === "") {
       $("#you")
         .removeClass()
