@@ -52,8 +52,8 @@ var janus = null;
 var sfutest = null;
 var opaqueId = "videoroomtest-" + Janus.randomString(12);
 
-var myroom = 1234; // Demo room
-if (getQueryStringValue("room") !== "") myroom = parseInt($("#roomId").val());
+var myroom = parseInt($("#roomId").val()); // Demo room
+// if (getQueryStringValue("room") !== "") myroom = parseInt($("#roomId").val());
 var myusername = null;
 var myid = null;
 var mystream = null;
