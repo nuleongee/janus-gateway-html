@@ -52,7 +52,7 @@ var janus = null;
 var sfutest = null;
 var opaqueId = "videoroomtest-" + Janus.randomString(12);
 
-var myroom = parseInt($("#roomId").val(), 10); // Demo room
+var myroom = parseInt($("#roomId").val()); // Demo room
 if (getQueryStringValue("room") !== "")
   myroom = parseInt(getQueryStringValue("room"));
 var myusername = null;
