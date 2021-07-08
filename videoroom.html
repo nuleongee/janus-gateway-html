@@ -7,7 +7,7 @@
     <title>Janus WebRTC Server: Video Room Demo</title>
     <script
       type="text/javascript"
-      src="https://cdnjs.cloudflare.com/ajax/libs/webrtc-adapter/7.4.0/adapter.min.js"
+      src="https://cdnjs.cloudflare.com/ajax/libs/webrtc-adapter/8.0.0/adapter.min.js"
     ></script>
     <script
       type="text/javascript"
@@ -33,7 +33,7 @@
       type="text/javascript"
       src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.js"
     ></script>
-    <script type="text/javascript" src="janus_sub.js"></script>
+    <script type="text/javascript" src="janus.js"></script>
     <script type="text/javascript" src="videoroom.js"></script>
     <script>
       $(function () {
@@ -48,7 +48,7 @@
     </script>
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.4.0/spacelab/bootstrap.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.4.0/cerulean/bootstrap.min.css"
       type="text/css"
     />
     <link rel="stylesheet" href="css/demo.css" type="text/css" />
@@ -69,7 +69,7 @@
         alt="Fork me on GitHub"
     /></a>
 
-    <nav class="navbar navbar-inverse navbar-static-top"></nav>
+    <nav class="navbar navbar-default navbar-static-top"></nav>
 
     <div class="container">
       <div class="row">
@@ -96,15 +96,6 @@
                   approach. This means that the plugin acts as a SFU (Selective
                   Forwarding Unit) rather than an MCU (Multipoint Control Unit).
                 </p>
-                <div class="alert alert-info">
-                  Notice that this is the <b>original</b> VideoRoom demo, and
-                  uses a different PeerConnections per each subscription: if you
-                  want to test the new multistream support, instead, try the
-                  <a href="mvideoroomtest.html">multistream VideoRoom demo</a>
-                  instead. The two demos are interoperable, if you want to see
-                  how different subscription mechanisms are used on the same
-                  sources.
-                </div>
                 <p>
                   If you're interested in testing how simulcasting can be used
                   within the context of a videoconferencing application, just
@@ -140,6 +131,14 @@
               <span class="label label-info" id="you"></span>
               <div class="col-md-12" id="controls">
                 <div class="input-group margin-bottom-md hide" id="registernow">
+                  <span class="input-group-addon">Room ID:</span>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="roomId"
+                    value="1234"
+                    placeholder="room id"
+                  />
                   <span class="input-group-addon">@</span>
                   <input
                     autocomplete="off"
