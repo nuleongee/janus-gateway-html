@@ -518,7 +518,7 @@ function registerUsername() {
     }
     var register = {
       request: "join",
-      room: parseInt($("#room_id").val(), 10) || myroom,
+      room: myroom,
       ptype: "publisher",
       display: username,
     };
